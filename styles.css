@@ -1,0 +1,114 @@
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 2% 7%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.nav-links > li {
+  padding: 0 10px;
+}
+
+main {
+  display: grid;
+  grid-template-areas:
+    "hero hero new"
+    "hero hero new"
+    "hero hero new"
+    "hero hero new"
+    "pop pop pop";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  max-width: 100vw;
+}
+
+.hero-container {
+  grid-area: hero;
+  display: grid;
+  grid-template-areas:
+    "image image"
+    "image image"
+    "title content"
+    "title content";
+  grid-template-columns: 1fr 1fr;
+}
+
+#hero-img-container {
+  grid-area: image;
+  width: 100%;
+}
+
+#hero-img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  max-width: 100%;
+}
+
+#hero-title {
+  grid-area: title;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+#hero-content {
+  grid-area: content;
+}
+
+.new-container {
+  grid-area: new;
+  display: flex;
+  flex-direction: column;
+}
+
+.pop-container {
+  grid-area: pop;
+  display: grid;
+  grid-template-areas: "retro laptops gaming";
+}
+
+#retro-pcs {
+  grid-area: retro;
+}
+
+#laptops {
+  grid-area: laptops;
+}
+
+#gaming {
+  grid-area: gaming;
+}
+
+.pop-article {
+  display: flex;
+}
+
+.pop-art-content {
+  padding-left: 10px;
+}
+
+/* ---- Footer Style ---- */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
